@@ -1,0 +1,29 @@
+﻿@model PositivaMvc.Models.Colaborador
+@{
+    ViewData["Title"] = "Details";
+}
+
+<h2>Detalhes Colaborador</h2>
+
+<div>
+    <h4>Colaborador</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.NomeColaborador)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.NomeColaborador)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Empresa)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Empresa.CadastroEmpresa)
+        </dd>
+    </dl>
+</div>
+<div>
+    <a asp-action="Edit" asp-route-id="@Model.Id" class="btn btn-default">Editar</a>
+    <a asp-action="Index">Voltar para Lista</a>
+</div>

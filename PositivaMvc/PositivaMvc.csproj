@@ -1,0 +1,14 @@
+﻿<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp2.1</TargetFramework>
+    <UserSecretsId>aspnet-PositivaMvc-14BD924C-4CC1-451A-A05D-BC625E503701</UserSecretsId>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.AspNetCore.App" />
+    <PackageReference Include="Microsoft.AspNetCore.Razor.Design" Version="2.1.2" PrivateAssets="All" />
+    <PackageReference Include="Pomelo.EntityFrameworkCore.MySql" Version="2.1.1" />
+  </ItemGroup>
+
+</Project>

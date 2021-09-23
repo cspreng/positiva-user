@@ -1,0 +1,39 @@
+﻿@model PositivaMvc.Models.ViewModels.ColaboradorFormViewModel
+@{
+    ViewData["Title"] = "Editar Colaborador";
+}
+
+<h2>@ViewData["Title"] </h2>
+
+<h4>Colaborador</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="Edit">
+            <input type="hidden" asp-for="Colaborador.Id" />
+            <div class="form-group">
+                <label asp-for="Colaborador.NomeColaborador" class="control-label"></label>
+                <input asp-for="Colaborador.NomeColaborador" class="form-control" />
+            </div>
+            <div class="form-group">
+                <label asp-for="Colaborador.LoginId" class="control-label">Perfil</label>
+                <select asp-for="Colaborador.LoginId" asp-items="@(new SelectList(Model.Logins,"Id","Usuario"))" class="form-control"></select>
+            </div>
+            <div class="form-group">
+                <label asp-for="Colaborador.EmpresaId" class="control-label">Nome da Empresa</label>
+                <select asp-for="Colaborador.EmpresaId" asp-items="@(new SelectList(Model.Empresas,"Id","CadastroEmpresa"))" class="form-control"></select>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Save" class="btn btn-default" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-action="Index">Voltar para Lista</a>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}

@@ -1,0 +1,34 @@
+﻿@model PositivaMvc.Models.ViewModels.GrupoPerguntasFormViewModel
+@{
+    ViewData["Title"] = "Editar Grupo de Perguntas";
+}
+
+<h2>@ViewData["Title"] </h2>
+
+<h4>Colaborador</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="Edit">
+            <input type="hidden" asp-for="GrupoPerguntas.Id" />
+            <div class="form-group">
+                <label asp-for="GrupoPerguntas.Habilidade" class="control-label"></label>
+                <input asp-for="GrupoPerguntas.Habilidade" class="form-control" />
+            </div>
+            <div class="form-group">
+                <label asp-for="GrupoPerguntas.AvaliacaoId" class="control-label">Avaliação</label>
+                <select asp-for="GrupoPerguntas.AvaliacaoId" asp-items="@(new SelectList(Model.Avaliacaos,"Id","Feedback"))" class="form-control"></select>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Salvar" class="btn btn-default" />
+            </div>
+        </form>
+    </div>
+</div>
+<div>
+    <a asp-action="Index">Voltar para Lista</a>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}
