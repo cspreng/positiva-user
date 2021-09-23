@@ -1,6 +1,5 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using PositivaMvc.Models;
-
 using PositivaMvc.Services;
 using PositivaMvc.Models.ViewModels;
 using System.Threading.Tasks;
@@ -39,12 +38,13 @@ namespace PositivaMvc.Controllers
         {
             ViewData["UserId"] = new SelectList(_context.Users, "Id", "Email");
             ViewData["PerfilId"] = new SelectList(_context.Perfil, "Id", "TipoPerfil");
+            ViewData["LoginId"] = new SelectList(_context.Login, "Id", "Usuario");
             return View();
         }
 
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Create([Bind("Id,PerfilId,UserId")] Login login)
+        public async Task<IActionResult> Create([Bind("Id,PerfilId,UserId,Usuario")] Login login)
         {
             if (ModelState.IsValid)
             {
@@ -54,6 +54,7 @@ namespace PositivaMvc.Controllers
             }
             ViewData["UserId"] = new SelectList(_context.Users, "Id", "Email", login.UserId);
             ViewData["PerfilId"] = new SelectList(_context.Perfil, "Id", "TipoPerfil", login.PerfilId);
+            ViewData["LoginId"] = new SelectList(_context.Login, "Id", "Usuario", login.Usuario);
             return View(login);
         }
 
@@ -125,12 +126,13 @@ namespace PositivaMvc.Controllers
             }
             ViewData["UserId"] = new SelectList(_context.Users, "Id", "Email", login.UserId);
             ViewData["PerfilId"] = new SelectList(_context.Perfil, "Id", "TipoPerfil", login.PerfilId);
+            ViewData["LoginId"] = new SelectList(_context.Login, "Id", "Usuario", login.Id);
             return View(login);
         }
 
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Edit(int id, [Bind("Id,PerfilId,UserId")] Login login)
+        public async Task<IActionResult> Edit(int id, [Bind("Id,PerfilId,UserId,Usuario")] Login login)
         {
             if (id != login.Id)
             {
@@ -162,6 +164,7 @@ namespace PositivaMvc.Controllers
 
             ViewData["UserId"] = new SelectList(_context.Users, "Id", "Email", login.UserId);
             ViewData["PerfilId"] = new SelectList(_context.Perfil, "Id", "TipoPerfil", login.PerfilId);
+            ViewData["LoginId"] = new SelectList(_context.Login, "Id", "Usuario", login.Id);
             return View(login);
         }
 

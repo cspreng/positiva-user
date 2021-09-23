@@ -67,7 +67,7 @@ using PositivaMvc.Models;
             WriteLiteral("\r\n<h2>Perfil</h2>\r\n\r\n<p>\r\n    ");
             EndContext();
             BeginContext(121, 68, false);
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "09e859b8446e4e9f83ba8f87c9c21355", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "a2d7ec7288744bcd9d64a016559ea456", async() => {
                 BeginContext(168, 17, true);
                 WriteLiteral("Criar Novo Perfil");
                 EndContext();
@@ -109,7 +109,7 @@ using PositivaMvc.Models;
             WriteLiteral("\r\n                </td>\r\n                <td>\r\n                    ");
             EndContext();
             BeginContext(604, 54, false);
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "4d28d522a5fa4d4ca89b1b5a7a14f8e7", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "450eea6e563f4ea4a00c5a5978ed2a55", async() => {
                 BeginContext(649, 5, true);
                 WriteLiteral("Edita");
                 EndContext();
@@ -144,7 +144,7 @@ using PositivaMvc.Models;
             WriteLiteral(" |\r\n                    ");
             EndContext();
             BeginContext(682, 60, false);
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "1700c345e2624196a0e96c58ac3548fd", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "b8e220bb2269470cb679ed83e5a8b056", async() => {
                 BeginContext(730, 8, true);
                 WriteLiteral("Detalhes");
                 EndContext();
@@ -179,7 +179,7 @@ using PositivaMvc.Models;
             WriteLiteral(" |\r\n                    ");
             EndContext();
             BeginContext(766, 57, false);
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "4d32212298014987b7fc5dbc6436a1b0", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "60e0dcd61865465e8cc2de4f63ad773a", async() => {
                 BeginContext(813, 6, true);
                 WriteLiteral("Delete");
                 EndContext();
